@@ -8,13 +8,13 @@ const App = () => {
   const [Edit_description, SetEdit_description] = useState("");
 
   const Fetch_Data = async () => {
-    let notes = await axios.get("http://localhost:3000/api/notes");
+    let notes = await axios.get("https://new-integration-ik93.onrender.com/api/notes");
     SetNotes(notes.data.Notes);
   };
 
 
   const Note_Get_handler = async (title, description) => {
-    await axios.post("http://localhost:3000/api/notes", {
+    await axios.post("https://new-integration-ik93.onrender.com/api/notes", {
       title: title,
       description: description,
     });
@@ -37,7 +37,7 @@ const App = () => {
 
 
   const Save_handler = async () => {
-    await axios.patch(`http://localhost:3000/api/notes/${Edit_id}`, {
+    await axios.patch(`https://new-integration-ik93.onrender.com/api/notes/${Edit_id}`, {
       description: Edit_description,
       title: Edit_title,
     });
