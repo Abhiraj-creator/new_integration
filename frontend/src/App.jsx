@@ -24,7 +24,7 @@ const App = () => {
 
 
   const Delete_handler = async (id) => {
-    await axios.delete(`http://localhost:3000/api/notes/${id}`);
+    await axios.delete(`https://new-integration-ik93.onrender.com/api/notes/${id}`);
     Fetch_Data();
   };
 
